@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.__navbar_content {
+	@apply hidden mx-auto p-2 md:flex items-center justify-between py-9 px-[3rem];
+}
+.__navbar_sm_content {
+	@apply md:hidden items-center justify-between p-2 py-4;
+}
+.__home {
+	@apply bg-primary h-[120vh];
+}
+
+.nav__Links {
+	@apply text-white;
+}
+
+.__line {
+	border-top: 1px solid white;
+	width: 98%;
+	display: inline-block;
+	margin: 8px 0;
+}
+.__line_sm {
+	border-top: 1px solid white;
+	width: 100%;
+	display: inline-block;
+	margin: 8px 0;
+}
+
+.__home_riders_line {
+	border-top: 1px solid white;
+	width: 100%;
+	display: inline-block;
+	@apply md:mt-[2rem] mt-[1.3rem];
+}
+
+.__vendor_net_btn {
+	@apply w-[17rem] bg-[#00674B] rounded-full text-white text-center;
+	box-shadow: 0 0px 5px 0px #f99808;
+}
+
+.__download_btn1 {
+	@apply p-[0.5rem] rounded-full md:w-[12rem] w-[10rem] mr-4 mx-auto md:mx-3 mb-2 md:mb-0;
+	background: white;
+}
+
+.__download_btn2 {
+	@apply p-[0.5rem] rounded-full md:w-[12rem] w-[10rem] bg-[#f99808] mx-auto md:mx-0;
+	color: black;
+}
+
+.__home_riders {
+	background-color: black;
+	@apply md:h-[10vh] h-[5vh] md:w-[100%] w-[85%];
+}
+
+@font-face {
+	font-family: Young Serif;
+	src: url(/YoungSerif-Regular.ttf);
+}
+.__young_serif {
+	font-family: Young Serif;
+}
+@font-face {
+	font-family: AR One Sans;
+	src: url(/AROneSans-Regular.ttf);
+}
+.__ar_one_sans {
+	font-family: AR One Sans;
+}
+.__join_waitlist {
+	@apply bg-primary h-screen text-center;
+}
+.__join_waitlist_content {
+	@apply md:pt-[12rem] pt-[12rem];
+}
+.__waitlist_form {
+	background-color: transparent;
+	@apply border-white border-2 rounded-md w-[19rem] py-2 text-white;
+}
+.__waitlist_btn {
+	@apply  p-[1rem] rounded-full md:w-[15rem] w-[10rem] mr-4 mx-auto md:mx-3 mb-2 md:mb-0;
+	background: white;
+}
