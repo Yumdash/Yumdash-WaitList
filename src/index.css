@@ -9,7 +9,7 @@
 	@apply md:hidden items-center justify-between p-2 py-4;
 }
 .__home {
-	@apply bg-primary h-[120vh];
+	@apply bg-primary md:h-[120vh] h-[130vh];
 }
 
 .nav__Links {
@@ -37,8 +37,12 @@
 }
 
 .__vendor_net_btn {
-	@apply w-[17rem] bg-[#00674B] rounded-full text-white text-center;
+	@apply mb-7 px-12 py-1 w-[17rem] bg-[#00674B] rounded-full text-white text-center;
 	box-shadow: 0 0px 5px 0px #f99808;
+}
+
+.__vendor_content {
+	@apply text-white md:px-[24rem] px-[1rem];
 }
 
 .__download_btn1 {
@@ -60,6 +64,45 @@
 	font-family: Young Serif;
 	src: url(/YoungSerif-Regular.ttf);
 }
+.__join_waitlist {
+	@apply bg-primary text-center  w-[90vh];
+}
+.__join_waitlist_content {
+	@apply md:pt-[2rem] pt-[2rem];
+}
+.__waitlist_form {
+	background-color: transparent;
+	@apply border-white border-2 rounded-md w-[19rem] py-2 text-white;
+}
+.__waitlist_btn {
+	@apply p-[1rem] rounded-full md:w-[15rem] w-[10rem] mr-4 mx-auto md:mx-3 mb-9 md:mb-7;
+	background: white;
+}
+
+body.active-modal {
+	overflow-y: hidden;
+}
+
+.modal,
+.overlay {
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	position: fixed;
+}
+
+.overlay {
+	background: rgba(49, 49, 49, 0.8);
+}
+.modal-content {
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
 .__young_serif {
 	font-family: Young Serif;
 }
@@ -70,17 +113,37 @@
 .__ar_one_sans {
 	font-family: AR One Sans;
 }
-.__join_waitlist {
-	@apply bg-primary h-screen text-center;
+
+.__house1 {
+	@apply absolute left-0 md:-bottom-6 -bottom-2 md:h-[7rem] h-[4rem];
 }
-.__join_waitlist_content {
-	@apply md:pt-[12rem] pt-[12rem];
+.__house2 {
+	@apply absolute md:right-[0rem] -right-[3.5rem] md:-bottom-[1.5rem] -bottom-[0.59rem] md:h-[14rem] h-[7rem];
 }
-.__waitlist_form {
-	background-color: transparent;
-	@apply border-white border-2 rounded-md w-[19rem] py-2 text-white;
+.__rider1 {
+	@apply absolute md:right-[15rem] right-[2rem] md:bottom-2 bottom-2 md:h-[14rem] h-[6.5rem];
 }
-.__waitlist_btn {
-	@apply  p-[1rem] rounded-full md:w-[15rem] w-[10rem] mr-4 mx-auto md:mx-3 mb-2 md:mb-0;
-	background: white;
+.__rider2 {
+	@apply absolute md:right-[55rem] right-[10rem] -bottom-2 md:h-[14rem] h-[6.5rem];
+}
+
+@media only screen and (min-height: 768px) {
+	.__home {
+		@apply bg-primary md:h-[97vh] h-[107vh];
+	}
+	.__house1 {
+		@apply md:-bottom-10 -bottom-3;
+	}
+	.__house2 {
+		@apply -bottom-[0.9rem] md:-bottom-[2.5rem];
+	}
+	.__vendor_content {
+		@apply md:px-[22rem];
+	}
+	.__rider1 {
+		@apply  h-[6rem];
+	}
+	.__rider2 {
+		@apply  h-[6rem];
+	}
 }
