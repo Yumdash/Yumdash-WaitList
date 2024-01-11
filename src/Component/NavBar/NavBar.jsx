@@ -9,34 +9,46 @@ const NavBar = () => {
 				<Link className="text-white font-bold ">
 					<img src={YumDash} alt="" className="pb-5 h-[66px]" />
 				</Link>
-				<div className="__ar_one_sans pt-1 flex space-x-12">
-					<a href="#" className="nav__Links no-underline">
-						FACEBOOK <span className="__line" />
-					</a>
-					<a href="#" className="nav__Links no-underline">
-						INSTAGRAM <span className="__line" />
-					</a>
-					<a href="#" className="nav__Links no-underline">
-						TWITTER <span className="__line" />
-					</a>
+				<div className="navbar __ar_one_sans space-x-8">
+					<li>
+						<a className=" __ar_one_sans text-[1.3rem]" href="#">
+							Facebook
+						</a>
+					</li>
+					<li>
+						<a className=" __ar_one_sans text-[1.3rem]" href="#">
+							Instagram
+						</a>
+					</li>
+					<li>
+						<a className=" __ar_one_sans text-[1.3rem]" href="#">
+							Twitter
+						</a>
+					</li>
 				</div>
 			</nav>
 
 			{/* mobile */}
-			<nav className="__navbar_sm_content text-center">
+			<nav className="__navbar_sm_content">
 				<div>
-					<img src={YumDash} alt="" className="h-[4rem] mx-auto " />
+					<img src={YumDash} alt="" className="h-[3rem] mx-auto " />
 				</div>
-				<div className="__ar_one_sans flex pt-10 space-x-5 px-7">
-					<a href="#" className="nav__Links no-underline">
-						FACEBOOK <span className="__line_sm" />
-					</a>
-					<a href="#" className="nav__Links no-underline">
-						INSTAGRAM <span className="__line_sm" />
-					</a>
-					<a href="#" className="nav__Links no-underline">
-						TWITTER <span className="__line_sm" />
-					</a>
+				<div className="__ar_one_sans navbar flex pt-10 space-x-5 items-center justify-center">
+					<li>
+						<a className=" __ar_one_sans text-[1.3rem]" href="#">
+							Facebook
+						</a>
+					</li>
+					<li>
+						<a className=" __ar_one_sans text-[1.3rem]" href="#">
+							Instagram
+						</a>
+					</li>
+					<li>
+						<a className=" __ar_one_sans text-[1.3rem]" href="#">
+							Twitter
+						</a>
+					</li>
 				</div>
 			</nav>
 		</div>
