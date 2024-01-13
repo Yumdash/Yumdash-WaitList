@@ -11,17 +11,32 @@ const NavBar = () => {
 				</Link>
 				<div className="navbar __ar_one_sans space-x-8">
 					<li>
-						<a className=" __ar_one_sans text-[1.3rem]" href="#">
+						<a
+							className=" __ar_one_sans text-[1.3rem]"
+							href="https://www.facebook.com/yumdashafrica"
+							target="_blank"
+							rel="noreferrer"
+						>
 							Facebook
 						</a>
 					</li>
 					<li>
-						<a className=" __ar_one_sans text-[1.3rem]" href="#">
+						<a
+							className=" __ar_one_sans text-[1.3rem]"
+							href="https://www.instagram.com/yumdashng/"
+							target="_blank"
+							rel="noreferrer"
+						>
 							Instagram
 						</a>
 					</li>
 					<li>
-						<a className=" __ar_one_sans text-[1.3rem]" href="#">
+						<a
+							className=" __ar_one_sans text-[1.3rem]"
+							href="https://twitter.com/yumdash"
+							target="_blank"
+							rel="noreferrer"
+						>
 							Twitter
 						</a>
 					</li>
@@ -35,17 +50,32 @@ const NavBar = () => {
 				</div>
 				<div className="__ar_one_sans navbar flex pt-10 space-x-5 items-center justify-center">
 					<li>
-						<a className=" __ar_one_sans text-[1.3rem]" href="#">
+						<a
+							className=" __ar_one_sans text-[1rem]"
+							href="https://www.facebook.com/yumdashafrica"
+							target="_blank"
+							rel="noreferrer"
+						>
 							Facebook
 						</a>
 					</li>
 					<li>
-						<a className=" __ar_one_sans text-[1.3rem]" href="#">
+						<a
+							className=" __ar_one_sans text-[1rem]"
+							href="https://www.instagram.com/yumdashng/"
+							target="_blank"
+							rel="noreferrer"
+						>
 							Instagram
 						</a>
 					</li>
 					<li>
-						<a className=" __ar_one_sans text-[1.3rem]" href="#">
+						<a
+							className=" __ar_one_sans text-[1rem]"
+							href="https://twitter.com/yumdash"
+							target="_blank"
+							rel="noreferrer"
+						>
 							Twitter
 						</a>
 					</li>

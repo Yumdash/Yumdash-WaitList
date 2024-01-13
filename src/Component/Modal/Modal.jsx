@@ -1,8 +1,42 @@
 import { useState } from 'react';
+import axios from 'axios';
+// import ModalSm from './ModalSm';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
-const Modal = () => {
+const Modals = () => {
 	const [ modal, setModal ] = useState(false);
+	// const [ modalIsOpen, setmMdalIsOpen ] = useState(false);
+	const [ formData, setFormData ] = useState({
+		name: '',
+		email: ''
+	});
 
+	// const openModal = () => setmMdalIsOpen(true);
+	// const closeModal = () => setmMdalIsOpen(false);
+
+	const handleChange = (e) => {
+		setFormData({ ...formData, [e.target.name]: e.target.value });
+	};
+
+	const submitForm = async () => {
+		try {
+			if (!formData.name || !formData.email) {
+				toast.error('please fill out all fields');
+				return;
+			}
+
+			const response = await axios.post('https://submit-form.com/bV1IluTJB');
+			if (response) {
+				toast.success('Your waitlist submission has been gone successfully');
+			} else {
+				toast.error('Waitlist submission failed. Please try again');
+			}
+		} catch (error) {
+			console.error('Form submittion failed', error);
+			toast.error('Waitlist submission failed. Please try again');
+		}
+	};
 	const toggleModal = () => {
 		setModal(!modal);
 	};
@@ -26,10 +60,7 @@ const Modal = () => {
 						<div className="__join_waitlist">
 							<div className="__join_waitlist_content">
 								<h2 className="__ar_one_sans text-white text-3xl">Join Waitlist</h2>
-								<form
-									action="https://submit-form.com/bV1IluTJB"
-									className="__join_waitlist_form items-center justify-center mt-5"
-								>
+								<form className="__join_waitlist_form items-center justify-center mt-5">
 									<div>
 										<h1 className="__ar_one_sans text-white text-xl pr-[13rem] font-light">
 											Your Name
@@ -41,6 +72,8 @@ const Modal = () => {
 											type="text"
 											placeholder="Name"
 											required=""
+											onChange={handleChange}
+											value={formData.name}
 										/>
 									</div>
 									<div className="my-4 ">
@@ -54,15 +87,22 @@ const Modal = () => {
 											type="email"
 											placeholder="Email"
 											required=""
+											onChange={handleChange}
+											value={formData.email}
 										/>
 									</div>
 									<div className="mt-[3rem]">
-										<button type="submit" className="__waitlist_btn __ar_one_sans mr-3 text-black ">
+										<button
+											type="button"
+											onClick={submitForm}
+											className="__waitlist_btn __ar_one_sans mr-3 text-black "
+										>
 											Join Our Waitlist
 										</button>
 									</div>
 								</form>
 							</div>
+							{/* <ModalSm isOpen={modalIsOpen} onRequestClose={closeModal} /> */}
 						</div>
 					</div>
 				</div>
@@ -70,4 +110,4 @@ const Modal = () => {
 		</div>
 	);
 };
-export default Modal;
+export default Modals;

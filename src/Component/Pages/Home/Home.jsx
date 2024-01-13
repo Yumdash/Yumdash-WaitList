@@ -1,4 +1,4 @@
-import Modal from '../../Modal/Modal';
+import Modals from '../../Modal/Modal';
 import NavBar from '../../NavBar/NavBar';
 import Mail from '../../PartnerMail/Mail';
 import Ride from '../../asserts/Frame 2.png';
@@ -10,9 +10,9 @@ const Home = () => {
 			<div className="__home">
 				<NavBar />
 				<div className="__home_content pt-[4.5rem] px-2">
-					<div className="text-center space-y-7">
+					<div className="text-center  md:mt-[4rem] space-y-3 md:space-y-7">
 						<span className="__vendor_net_btn __ar_one_sans ">We Are Cooking</span>
-						<h1 className="__young_serif text-white md:text-[3rem] text-[24px]">
+						<h1 className="__young_serif text-white md:text-[3rem]  text-[24px]">
 							We Are Transforming <br /> The Food Industry
 						</h1>
 						<p className="__ar_one_sans __vendor_content">
@@ -23,10 +23,10 @@ const Home = () => {
 						</p>
 						<div>
 							<div className="items-center justify-center text-center mt-5 flex">
-								<Modal />
+								<Modals />
 								<Mail />
 							</div>
-							<p className="text-[0.8rem] text-white block md:hidden">
+							<p className="text-[0.8rem] mt-6 text-white block md:hidden">
 								For more info contact officialyumdash@gmail.com
 							</p>
 						</div>
