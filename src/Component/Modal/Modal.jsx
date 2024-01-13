@@ -1,19 +1,19 @@
 import { useState } from 'react';
 import axios from 'axios';
-// import ModalSm from './ModalSm';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import closeBtn from '../asserts/carbon_close-filled.png';
 
 const Modals = () => {
 	const [ modal, setModal ] = useState(false);
-	// const [ modalIsOpen, setmMdalIsOpen ] = useState(false);
+
+	const closeModal = () => {
+		setModal(false);
+	};
 	const [ formData, setFormData ] = useState({
 		name: '',
 		email: ''
 	});
-
-	// const openModal = () => setmMdalIsOpen(true);
-	// const closeModal = () => setmMdalIsOpen(false);
 
 	const handleChange = (e) => {
 		setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -28,7 +28,8 @@ const Modals = () => {
 
 			const response = await axios.post('https://submit-form.com/bV1IluTJB');
 			if (response) {
-				toast.success('Your waitlist submission has been gone successfully');
+				toast.success('Your details were submitted successfully');
+				closeModal();
 			} else {
 				toast.error('Waitlist submission failed. Please try again');
 			}
@@ -58,6 +59,9 @@ const Modals = () => {
 					<div onClick={toggleModal} className="overlay" />
 					<div className="modal-content">
 						<div className="__join_waitlist">
+							<div className="md:pl-[25rem] pl-[20rem] md:pt-[1rem] pt-[2rem]">
+								<img src={closeBtn} className="cursor-pointer" onClick={closeModal} />
+							</div>
 							<div className="__join_waitlist_content">
 								<h2 className="__ar_one_sans text-white text-3xl">Join Waitlist</h2>
 								<form className="__join_waitlist_form items-center justify-center mt-5">
@@ -102,7 +106,6 @@ const Modals = () => {
 									</div>
 								</form>
 							</div>
-							{/* <ModalSm isOpen={modalIsOpen} onRequestClose={closeModal} /> */}
 						</div>
 					</div>
 				</div>

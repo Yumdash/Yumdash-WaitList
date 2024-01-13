@@ -10,7 +10,7 @@ const Home = () => {
 			<div className="__home">
 				<NavBar />
 				<div className="__home_content pt-[4.5rem] px-2">
-					<div className="text-center  md:mt-[4rem] space-y-3 md:space-y-7">
+					<div className="text-center  md:mt-[4rem] mt-[9rem] space-y-3 md:space-y-7">
 						<span className="__vendor_net_btn __ar_one_sans ">We Are Cooking</span>
 						<h1 className="__young_serif text-white md:text-[3rem]  text-[24px]">
 							We Are Transforming <br /> The Food Industry
