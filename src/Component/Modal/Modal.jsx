@@ -59,7 +59,7 @@ const Modals = () => {
 					<div onClick={toggleModal} className="overlay" />
 					<div className="modal-content">
 						<div className="__join_waitlist">
-							<div className="md:pl-[25rem] pl-[20rem] md:pt-[1rem] pt-[2rem]">
+							<div className="__close_btn">
 								<img src={closeBtn} className="cursor-pointer" onClick={closeModal} />
 							</div>
 							<div className="__join_waitlist_content">

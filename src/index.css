@@ -110,7 +110,7 @@
 /* modal styles */
 
 .__join_waitlist {
-	@apply bg-primary  md:w-[70vh] w-[45vh] rounded-xl border-white border-2 border-solid;
+	@apply bg-primary md:w-[70vh] w-[45vh] rounded-xl border-white border-2 border-solid;
 }
 .__join_waitlist_content {
 	@apply md:pt-[2rem] pt-[2rem];
@@ -119,12 +119,15 @@
 	background-color: transparent;
 	@apply border-white border-2 rounded-md w-[19rem] py-2 text-white;
 }
-.__waitlist_form::placeholder{
+.__waitlist_form::placeholder {
 	@apply px-3 text-[0.9rem];
 }
 .__waitlist_btn {
 	@apply p-[1rem] rounded-full md:w-[15rem] w-[10rem] mr-4 mx-auto md:mx-3 mb-9 md:mb-7;
 	background: white;
+}
+.__close_btn {
+	@apply md:pl-[25rem] pl-[19rem] md:pt-[1rem] pt-[2rem];
 }
 
 body.active-modal {
@@ -170,5 +173,8 @@ body.active-modal {
 
 	.__vendor_content {
 		@apply md:px-[22rem];
+	}
+	.__close_btn {
+		@apply md:pl-[30rem] pl-[20rem] md:pt-[1rem] pt-[2rem];
 	}
 }
