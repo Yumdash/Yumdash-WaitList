@@ -26,8 +26,8 @@ const Home = () => {
 								<Modals />
 								<Mail />
 							</div>
-							<p className="text-[0.8rem] mt-6 text-white block md:hidden">
-								For more info contact officialyumdash@gmail.com
+							<p className="text-[0.8rem] md:text-[1rem] mt-6 text-white">
+								For more info contact info@yumdash.africa
 							</p>
 						</div>
 					</div>

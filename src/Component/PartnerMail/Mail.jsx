@@ -1,6 +1,6 @@
 const Mail = () => {
 	const openGmail = () => {
-		const email = 'officialyumdash@gmail.com';
+		const email = 'partner@yumdash.africa';
 
 		const gmailComposeUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}`;
 
