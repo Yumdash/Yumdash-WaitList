@@ -14,7 +14,8 @@ const Home = () => {
           We Are Cooking
         </span>
         <h1 className="__young_serif text-white md:text-[3rem] leading-tight text-[1.8rem] text-center">
-          We Are Transforming <br /> The Food Industry
+          Own An Online Food <br /> Ordering Website Within <br /> 5 Minutes
+          Today.
         </h1>
         <p className="px-2 __ar_one_sans text-center md:w-1/2 text-white font-medium text-base md:text-xl">
           We are creating the first truly effortless{" "}
@@ -24,6 +25,9 @@ const Home = () => {
           and <span className="text-[#00E9AA]">food marketplaces</span> while
           eliminating their{" "}
           <span className="text-[#FE3478]">biggest drawbacks</span>.
+          <span className="text-[#F49200]">
+            Own An Online Food Ordering Website Within 5minutes Right Now
+          </span>
         </p>
 
         <div className="space-y-4">

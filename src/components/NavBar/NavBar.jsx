@@ -1,6 +1,21 @@
 import { Link } from "react-router-dom";
 import YumDash from "../assets/logo.png";
 
+const socialLinks = [
+  {
+    name: "Facebook",
+    link: "https://www.facebook.com/yumdashafrica",
+  },
+  {
+    name: "Instagram",
+    link: "https://www.instagram.com/yumdashng/",
+  },
+  {
+    name: "X/Twitter",
+    link: "https://x.com/yumdashng",
+  },
+];
+
 const NavBar = () => {
   return (
     <div>
@@ -10,36 +25,18 @@ const NavBar = () => {
           <img src={YumDash} alt="" className="pb-5 h-[66px]" />
         </Link>
         <div className="navbar __ar_one_sans space-x-8">
-          <li>
-            <a
-              className=" __ar_one_sans text-[1.3rem]"
-              href="https://www.facebook.com/yumdashafrica"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Facebook
-            </a>
-          </li>
-          <li>
-            <a
-              className=" __ar_one_sans text-[1.3rem]"
-              href="https://www.instagram.com/yumdashng/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Instagram
-            </a>
-          </li>
-          <li>
-            <a
-              className=" __ar_one_sans text-[1.3rem]"
-              href="https://twitter.com/yumdash"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Twitter
-            </a>
-          </li>
+          {socialLinks.map((link) => (
+            <li key={link.name}>
+              <a
+                className=" __ar_one_sans text-[1.3rem]"
+                href={link.href}
+                target="_blank"
+                rel="noreferrer"
+              >
+                {link.name}
+              </a>
+            </li>
+          ))}
         </div>
       </nav>
 
@@ -49,36 +46,18 @@ const NavBar = () => {
           <img src={YumDash} alt="" className="h-[3rem] mx-auto " />
         </div>
         <div className="__ar_one_sans navbar flex pt-7 space-x-5 items-center justify-center">
-          <li>
-            <a
-              className=" __ar_one_sans text-[1rem]"
-              href="https://www.facebook.com/yumdashafrica"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Facebook
-            </a>
-          </li>
-          <li>
-            <a
-              className=" __ar_one_sans text-[1rem]"
-              href="https://www.instagram.com/yumdashng/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Instagram
-            </a>
-          </li>
-          <li>
-            <a
-              className=" __ar_one_sans text-[1rem]"
-              href="https://twitter.com/yumdash"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Twitter
-            </a>
-          </li>
+          {socialLinks.map((link) => (
+            <li key={link.name}>
+              <a
+                className=" __ar_one_sans text-base"
+                href={link.href}
+                target="_blank"
+                rel="noreferrer"
+              >
+                {link.name}
+              </a>
+            </li>
+          ))}
         </div>
       </nav>
     </div>
