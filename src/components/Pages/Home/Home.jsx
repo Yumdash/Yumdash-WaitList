@@ -1,5 +1,4 @@
 import Modal from "../../Modal/Modal";
-import NavBar from "../../NavBar/NavBar";
 import Mail from "../../PartnerMail/Mail";
 import Ride from "../../assets/Frame 2.png";
 import RideSm from "../../assets/mobile view.png";
@@ -8,7 +7,6 @@ import WishListForm from "./WishListForm";
 const Home = () => {
   return (
     <div className="min-h-screen flex flex-col justify-center">
-      <NavBar />
       <div className="flex items-center flex-col justify-center gap-5 md:gap-3">
         <span className="__ar_one_sans text-white px-14 py-2 border border-[#474949]/80 shadow-[#F49200]/20 shadow-sm rounded-full bg-[#FFFFFF1A] transition duration-500 hover:-translate-y-1">
           We Are Cooking
